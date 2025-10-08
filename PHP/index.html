@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz danych</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #74ABE2, #5563DE);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background-color: white;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            width: 350px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="date"]:focus,
+        input[type="email"]:focus {
+            border-color: #5563DE;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #5563DE;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3942b4;
+        }
+
+        label {
+            font-weight: bold;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="dane.php">
+        <h2>Formularz danych</h2>
+
+        <label>Imię:</label>
+        <input type="text" name="Imie" placeholder="Imię" required>
+
+        <label>Nazwisko:</label>
+        <input type="text" name="Nazwisko" placeholder="Nazwisko" required>
+
+        <label>Numer domu:</label>
+        <input type="text" name="Numer_domu" placeholder="Numer domu">
+
+        <label>Numer telefonu:</label>
+        <input type="text" name="Numer_telefonu" placeholder="Numer telefonu">
+
+        <label>Adres zamieszkania:</label>
+        <input type="text" name="Adres_zamieszkania" placeholder="Adres zamieszkania">
+
+        <label>Kod pocztowy:</label>
+        <input type="text" name="Kod_pocztowy" placeholder="Kod pocztowy">
+
+        <label>Adres e-mail:</label>
+        <input type="email" name="Adres_email" placeholder="Adres email">
+
+        <label>Data urodzenia:</label>
+        <input type="date" name="Data_urodzenia" required>
+
+        <input type="submit" value="Wyślij">
+    </form>
+</body>
+</html>
